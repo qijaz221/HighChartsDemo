@@ -13,6 +13,7 @@
 		590AF5822591B9AD00737304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 590AF5802591B9AD00737304 /* Main.storyboard */; };
 		590AF5842591B9AE00737304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 590AF5832591B9AE00737304 /* Assets.xcassets */; };
 		590AF5872591B9AE00737304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 590AF5852591B9AE00737304 /* LaunchScreen.storyboard */; };
+		A856135831091418BE1F0238 /* Pods_HighChartsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653DD8234214AC0B66D66521 /* Pods_HighChartsDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		590AF5832591B9AE00737304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		590AF5862591B9AE00737304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		590AF5882591B9AE00737304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		653DD8234214AC0B66D66521 /* Pods_HighChartsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighChartsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B45557C74C224B87F17864ED /* Pods-HighChartsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighChartsDemo.debug.xcconfig"; path = "Target Support Files/Pods-HighChartsDemo/Pods-HighChartsDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B4F9AF30423DFF7052506DE4 /* Pods-HighChartsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighChartsDemo.release.xcconfig"; path = "Target Support Files/Pods-HighChartsDemo/Pods-HighChartsDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A856135831091418BE1F0238 /* Pods_HighChartsDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1665DA97E1F10D0F7C0BE3A4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				653DD8234214AC0B66D66521 /* Pods_HighChartsDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		590AF56E2591B9AD00737304 = {
 			isa = PBXGroup;
 			children = (
 				590AF5792591B9AD00737304 /* HighChartsDemo */,
 				590AF5782591B9AD00737304 /* Products */,
+				5E3975312C6CE5597CB084C5 /* Pods */,
+				1665DA97E1F10D0F7C0BE3A4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = HighChartsDemo;
 			sourceTree = "<group>";
 		};
+		5E3975312C6CE5597CB084C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B45557C74C224B87F17864ED /* Pods-HighChartsDemo.debug.xcconfig */,
+				B4F9AF30423DFF7052506DE4 /* Pods-HighChartsDemo.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 590AF58B2591B9AE00737304 /* Build configuration list for PBXNativeTarget "HighChartsDemo" */;
 			buildPhases = (
+				91F0B3EAF47AD64B1B3A83C3 /* [CP] Check Pods Manifest.lock */,
 				590AF5732591B9AD00737304 /* Sources */,
 				590AF5742591B9AD00737304 /* Frameworks */,
 				590AF5752591B9AD00737304 /* Resources */,
+				30DEE5B0C1D44ADB193D6346 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30DEE5B0C1D44ADB193D6346 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighChartsDemo/Pods-HighChartsDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighChartsDemo/Pods-HighChartsDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HighChartsDemo/Pods-HighChartsDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91F0B3EAF47AD64B1B3A83C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HighChartsDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		590AF5732591B9AD00737304 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		590AF58C2591B9AE00737304 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B45557C74C224B87F17864ED /* Pods-HighChartsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +371,7 @@
 		};
 		590AF58D2591B9AE00737304 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4F9AF30423DFF7052506DE4 /* Pods-HighChartsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
