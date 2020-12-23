@@ -15,6 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        do {
+            if let path = Bundle.main.path(forResource: "DataSources", ofType: "json"),
+                let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
+                let json = try JSONSerialization.jsonObject(with: data) as? [Any] {
+                let dictionary = ["sources" : json]
+                UserDefaults.standard.register(defaults: dictionary)
+            }
+        } catch {
+            print("Error deserializing JSON: \(error)")
+        }
         //preload
         HIChartView.preload()
         return true

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		590AF5822591B9AD00737304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 590AF5802591B9AD00737304 /* Main.storyboard */; };
 		590AF5842591B9AE00737304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 590AF5832591B9AE00737304 /* Assets.xcassets */; };
 		590AF5872591B9AE00737304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 590AF5852591B9AE00737304 /* LaunchScreen.storyboard */; };
+		59232F6425939428008ED31B /* DataSteps.json in Resources */ = {isa = PBXBuildFile; fileRef = 59232F6025939427008ED31B /* DataSteps.json */; };
+		59232F6525939428008ED31B /* DataSources.json in Resources */ = {isa = PBXBuildFile; fileRef = 59232F6125939428008ED31B /* DataSources.json */; };
+		59232F6625939428008ED31B /* DataCaloriesOut.json in Resources */ = {isa = PBXBuildFile; fileRef = 59232F6225939428008ED31B /* DataCaloriesOut.json */; };
+		59232F6725939428008ED31B /* DataCaloriesIn.json in Resources */ = {isa = PBXBuildFile; fileRef = 59232F6325939428008ED31B /* DataCaloriesIn.json */; };
+		59232F6A2593943D008ED31B /* OptionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59232F692593943D008ED31B /* OptionsProvider.swift */; };
 		A856135831091418BE1F0238 /* Pods_HighChartsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653DD8234214AC0B66D66521 /* Pods_HighChartsDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +30,11 @@
 		590AF5832591B9AE00737304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		590AF5862591B9AE00737304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		590AF5882591B9AE00737304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59232F6025939427008ED31B /* DataSteps.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataSteps.json; sourceTree = "<group>"; };
+		59232F6125939428008ED31B /* DataSources.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataSources.json; sourceTree = "<group>"; };
+		59232F6225939428008ED31B /* DataCaloriesOut.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataCaloriesOut.json; sourceTree = "<group>"; };
+		59232F6325939428008ED31B /* DataCaloriesIn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DataCaloriesIn.json; sourceTree = "<group>"; };
+		59232F692593943D008ED31B /* OptionsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsProvider.swift; sourceTree = "<group>"; };
 		653DD8234214AC0B66D66521 /* Pods_HighChartsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighChartsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B45557C74C224B87F17864ED /* Pods-HighChartsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighChartsDemo.debug.xcconfig"; path = "Target Support Files/Pods-HighChartsDemo/Pods-HighChartsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B4F9AF30423DFF7052506DE4 /* Pods-HighChartsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighChartsDemo.release.xcconfig"; path = "Target Support Files/Pods-HighChartsDemo/Pods-HighChartsDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,6 +81,7 @@
 		590AF5792591B9AD00737304 /* HighChartsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				59232F5F25939414008ED31B /* Resources */,
 				590AF57A2591B9AD00737304 /* AppDelegate.swift */,
 				590AF57C2591B9AD00737304 /* SceneDelegate.swift */,
 				590AF57E2591B9AD00737304 /* ViewController.swift */,
@@ -78,8 +89,20 @@
 				590AF5832591B9AE00737304 /* Assets.xcassets */,
 				590AF5852591B9AE00737304 /* LaunchScreen.storyboard */,
 				590AF5882591B9AE00737304 /* Info.plist */,
+				59232F692593943D008ED31B /* OptionsProvider.swift */,
 			);
 			path = HighChartsDemo;
+			sourceTree = "<group>";
+		};
+		59232F5F25939414008ED31B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				59232F6325939428008ED31B /* DataCaloriesIn.json */,
+				59232F6225939428008ED31B /* DataCaloriesOut.json */,
+				59232F6125939428008ED31B /* DataSources.json */,
+				59232F6025939427008ED31B /* DataSteps.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		5E3975312C6CE5597CB084C5 /* Pods */ = {
@@ -88,7 +111,6 @@
 				B45557C74C224B87F17864ED /* Pods-HighChartsDemo.debug.xcconfig */,
 				B4F9AF30423DFF7052506DE4 /* Pods-HighChartsDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -151,9 +173,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59232F6625939428008ED31B /* DataCaloriesOut.json in Resources */,
+				59232F6725939428008ED31B /* DataCaloriesIn.json in Resources */,
 				590AF5872591B9AE00737304 /* LaunchScreen.storyboard in Resources */,
 				590AF5842591B9AE00737304 /* Assets.xcassets in Resources */,
 				590AF5822591B9AD00737304 /* Main.storyboard in Resources */,
+				59232F6425939428008ED31B /* DataSteps.json in Resources */,
+				59232F6525939428008ED31B /* DataSources.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +235,7 @@
 				590AF57F2591B9AD00737304 /* ViewController.swift in Sources */,
 				590AF57B2591B9AD00737304 /* AppDelegate.swift in Sources */,
 				590AF57D2591B9AD00737304 /* SceneDelegate.swift in Sources */,
+				59232F6A2593943D008ED31B /* OptionsProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
