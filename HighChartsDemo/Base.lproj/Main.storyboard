@@ -16,24 +16,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-zq-S1x" customClass="HIChartView">
+                                <rect key="frame" x="0.0" y="314" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="1dh-D5-6Jb"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="Z4w-YQ-Vqd"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1i7-XA-6K0" customClass="HIChartView">
                                 <rect key="frame" x="0.0" y="44" width="414" height="250"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="U6b-mQ-Zrl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oSc-nb-axg" customClass="HIChartView">
+                                <rect key="frame" x="0.0" y="584" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="250" id="01E-tf-zdk"/>
+                                    <constraint firstAttribute="height" constant="250" id="cem-rt-o3I"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="oSc-nb-axg" firstAttribute="top" secondItem="dX2-zq-S1x" secondAttribute="bottom" constant="20" id="6cE-cr-ILj"/>
                             <constraint firstItem="1i7-XA-6K0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fg5-qL-59C"/>
+                            <constraint firstItem="oSc-nb-axg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KBz-kx-qk7"/>
                             <constraint firstItem="1i7-XA-6K0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SOY-Sy-KOw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1i7-XA-6K0" secondAttribute="trailing" id="ZiC-Pg-apr"/>
+                            <constraint firstItem="dX2-zq-S1x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b29-oH-gRY"/>
+                            <constraint firstItem="oSc-nb-axg" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f34-7f-PXD"/>
+                            <constraint firstItem="dX2-zq-S1x" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iTQ-bc-nff"/>
+                            <constraint firstItem="dX2-zq-S1x" firstAttribute="top" secondItem="1i7-XA-6K0" secondAttribute="bottom" constant="20" id="v2p-TX-Cud"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="chartView" destination="1i7-XA-6K0" id="tOt-IA-3Nd"/>
+                        <outlet property="chartView2" destination="dX2-zq-S1x" id="kT1-zR-mqJ"/>
+                        <outlet property="chartView3" destination="oSc-nb-axg" id="hFi-6F-TZc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

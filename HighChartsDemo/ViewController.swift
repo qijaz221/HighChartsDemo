@@ -12,7 +12,8 @@ class ViewController: UIViewController {
     
     
     @IBOutlet weak var chartView: HIChartView!
-    
+    @IBOutlet weak var chartView2: HIChartView!
+    @IBOutlet weak var chartView3: HIChartView!
     
     var sources: [[String:Any]]!
     var data: [Any]!
@@ -25,7 +26,31 @@ class ViewController: UIViewController {
         self.loadSourcesAndData()
         self.dataName = "day"
         // Do any additional setup after loading the view.
-        var options = self.sources[0]
+        for index in 0...2 {
+            var options = self.sources[index]
+            chartView.backgroundColor = UIColor.clear
+            //chartView.delegate = self
+            
+            let seriesData = self.data[index] as! [String: Any]
+            let series = seriesData[self.dataName] as! [Int]
+            var sum = 0
+            for number in series {
+                sum += number
+            }
+            
+            options["subtitle"] = "\(sum) \(options["unit"]!)"
+            
+            if index == 0 {
+                chartView.options = OptionsProvider.provideOptions(forChartType: options, series: series, type: "day")
+            } else if index == 1 {
+                chartView2.options = OptionsProvider.provideOptions(forChartType: options, series: series, type: "day")
+            } else if index == 2 {
+                chartView3.options = OptionsProvider.provideOptions(forChartType: options, series: series, type: "day")
+            }
+            
+        }
+        
+        /*var options = self.sources[0]
         chartView.backgroundColor = UIColor.clear
         //chartView.delegate = self
         
@@ -38,19 +63,7 @@ class ViewController: UIViewController {
         
         options["subtitle"] = "\(sum) \(options["unit"]!)"
         
-        chartView.options = OptionsProvider.provideOptions(forChartType: options, series: series, type: "day")
-        
-        
-        
-        let button = UIButton(type: .custom)
-        button.setImage(UIImage(named: "ic_info_outline_white"), for: .normal)
-        
-        button.frame = CGRect(x: self.view.bounds.size.width - 20.0 - 5.0 - 24.0, y: 15.0, width: 24, height: 24)
-        
-        button.tag = 0
-        //utton.addTarget(self, action: #selector(self.showDetailData), for: .touchUpInside)
-        
-        chartView.addSubview(button)
+        chartView.options = OptionsProvider.provideOptions(forChartType: options, series: series, type: "day")*/
     }
 
 
